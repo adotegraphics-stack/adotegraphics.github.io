@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adote Graphics | Graphic Design & Visual Identity Portfolio</title>
+  <meta name="description" content="Portfolio of Adote Graphics, specializing in bold brand identity, expressive typography, editorial layout, packaging, and visual systems.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon icon using SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300FF66'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='56' fill='%230a0a0a'>AG</text></svg>">
+</head>
+<body>
+
+  <!-- Subtle background grid aesthetic -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- FLOATING NAVIGATION -->
+  <header class="site-nav">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo" aria-label="Home">
+        <span class="brand-badge dynamic-designer-initials">AG</span>
+        <span class="brand-name dynamic-designer-name">Adote Graphics</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#works" class="nav-link">Selected Work</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="availability-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span>Available Q4</span>
+        </div>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="display: none;" id="nav-cta-btn">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="badge-tag">Graphic Design & Logo Branding</span>
+          <span class="mono-tag" style="color: var(--text-muted);">Est. 2026 / Global</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="highlight-line">Crafting Iconic</span>
+          <span class="accent-text">Visual Identities</span>
+          <span class="highlight-line">& Experiences</span>
+        </h1>
+
+        <div class="hero-grid">
+          <div>
+            <p class="hero-bio dynamic-designer-tagline">
+              Shaping bold brand identities, expressive typography & editorial culture for visionary companies and creative institutions worldwide.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#works" class="btn btn-primary">
+                Explore Selected Works ↓
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                Get In Touch ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-stats-card">
+            <div class="stat-item">
+              <span class="stat-number" id="stat-experience">3+ Years</span>
+              <span class="stat-label">In The Industry</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="stat-projects">100+</span>
+              <span class="stat-label">Completed Works</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="stat-satisfaction">100%</span>
+              <span class="stat-label">Client Trust</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFINITE MARQUEE BANNER -->
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-content">
+        <span class="marquee-item">Brand Identity <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Editorial & Typography <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Packaging Systems <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Poster Art <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Art Direction <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">3D CGI Visuals <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Design Strategy <span class="marquee-separator">✦</span></span>
+        <!-- Repeat for seamless loop -->
+        <span class="marquee-item">Brand Identity <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Editorial & Typography <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Packaging Systems <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Poster Art <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Art Direction <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">3D CGI Visuals <span class="marquee-separator">✦</span></span>
+        <span class="marquee-item">Design Strategy <span class="marquee-separator">✦</span></span>
+      </div>
+    </div>
+
+    <!-- SELECTED WORKS / PROJECTS -->
+    <section id="works" class="container" style="padding-bottom: 5rem;">
+      <div class="section-header">
+        <div>
+          <span class="mono-tag" style="color: var(--accent-primary);">Featured Portfolio</span>
+          <h2 class="section-title">Selected Works</h2>
+          <p class="section-subtitle">
+            A curated collection of branding, packaging, editorial layout, and visual experiments created with relentless attention to detail.
+          </p>
+        </div>
+        <div class="header-actions-group">
+          <button id="open-add-modal-btn" class="btn btn-primary" title="Add a new project to your portfolio">
+            + Add Work
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all">All Disciplines</button>
+        <button class="filter-btn" data-filter="branding">Brand Identity</button>
+        <button class="filter-btn" data-filter="poster">Poster & Print</button>
+        <button class="filter-btn" data-filter="packaging">Packaging</button>
+        <button class="filter-btn" data-filter="editorial">Editorial & Type</button>
+        <button class="filter-btn" data-filter="digital">Motion & 3D</button>
+      </div>
+
+      <!-- Dynamic Projects Grid -->
+      <div id="projects-container" class="projects-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </section>
+
+    <!-- SERVICES & CAPABILITIES -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-primary);">What I Deliver</span>
+            <h2 class="section-title">Design Capabilities</h2>
+            <p class="section-subtitle">
+              Comprehensive design solutions tailored to amplify cultural presence and elevate brand equity.
+            </p>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <span class="service-number">01 / BRAND</span>
+            <div class="service-icon">✦</div>
+            <h3 class="service-title">Brand Identity & Strategy</h3>
+            <p class="service-desc">
+              Comprehensive brand architecture from initial positioning to visual identity systems that resonate across all digital and physical mediums.
+            </p>
+            <ul class="service-deliverables">
+              <li>Logomark & Monogram Systems</li>
+              <li>Brand Guidelines & Design Tokens</li>
+              <li>Typography Selection & Hierarchy</li>
+              <li>Iconography & Color Theory</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <span class="service-number">02 / PRINT & PACKAGING</span>
+            <div class="service-icon">❖</div>
+            <h3 class="service-title">Packaging & Print Media</h3>
+            <p class="service-desc">
+              Sensory, tangible experiences crafted with tactile materials, bespoke foil finishes, embossing, and exacting pre-press craftsmanship.
+            </p>
+            <ul class="service-deliverables">
+              <li>Product Box & Label Packaging</li>
+              <li>Editorial Books & Catalogs</li>
+              <li>Large Format Exhibition Posters</li>
+              <li>Specialty Print Production Specs</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <span class="service-number">03 / DIGITAL & ART DIRECTION</span>
+            <div class="service-icon">✹</div>
+            <h3 class="service-title">Art Direction & 3D Visuals</h3>
+            <p class="service-desc">
+              Creative direction that translates brand narratives into surreal 3D textures, kinetic motion assets, and digital campaign aesthetics.
+            </p>
+            <ul class="service-deliverables">
+              <li>CGI & 3D Product Renders</li>
+              <li>Motion Graphics & Video Idents</li>
+              <li>Digital Design Systems</li>
+              <li>Campaign Visual Strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & CREATIVE PHILOSOPHY -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-primary);">Design Philosophy</span>
+            <h2 class="about-quote">
+              "Graphic design is the intersection of <span>pure intention</span>, fearless aesthetics, and structural clarity."
+            </h2>
+            <p class="about-text">
+              I believe memorable design rejects generic conventions. Every project begins with in-depth research to unveil what makes a brand or message genuinely distinct, translating that essence into visceral visual identities and tactile print artifacts.
+            </p>
+            <p class="about-text">
+              Whether designing a bespoke typeface for a publication, directing a seasonal campaign, or packaging an artisanal product, the aim is always the same: make work that stops people in their tracks.
+            </p>
+
+            <div class="tool-stack">
+              <h4 class="tool-stack-title">Core Tools & Software Mastery</h4>
+              <div class="tools-badges-wrap">
+                <span class="tool-pill">Adobe Illustrator</span>
+                <span class="tool-pill">Adobe Photoshop</span>
+                <span class="tool-pill">Adobe InDesign</span>
+                <span class="tool-pill">Figma</span>
+                <span class="tool-pill">Blender 3D</span>
+                <span class="tool-pill">After Effects</span>
+                <span class="tool-pill">Glyphs Type Design</span>
+                <span class="tool-pill">Adobe Lightroom</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual-card">
+            <div class="visual-badge">CREATIVE RIGOR</div>
+            <h3 class="visual-sub">Concept Over Decoration</h3>
+            <p class="visual-desc">
+              Every curve, kerning choice, and chromatic contrast serves a definitive purpose. We turn ideas into enduring cultural currency.
+            </p>
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; display: flex; justify-content: space-between;">
+              <span class="mono-tag" style="color: var(--accent-primary);">Studio Motto</span>
+              <span class="mono-tag">Bold • Refined • Timeless</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & COLLABORATION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card-box">
+          <div class="contact-grid">
+            <div>
+              <span class="mono-tag" style="color: var(--accent-primary);">Get In Touch</span>
+              <h2 class="contact-title">Let’s Create Something Unforgettable</h2>
+              <p class="contact-subtitle">
+                Have an upcoming branding project, exhibition, or creative campaign? Let's discuss your vision and make it a reality.
+              </p>
+
+              <!-- One-click copy email pill -->
+              <div class="contact-email-copy" id="copy-email-btn" title="Click to copy email">
+                <span class="email-text dynamic-designer-email">hello@alexvance.design</span>
+                <span class="copy-badge">Copy</span>
+              </div>
+
+              <!-- Social Channels -->
+              <div class="socials-list">
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-link" id="social-behance">Behance ↗</a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link" id="social-dribbble">Dribbble ↗</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" id="social-instagram">Instagram ↗</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" id="social-linkedin">LinkedIn ↗</a>
+              </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Elena Rostova" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. elena@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-service" class="form-label">Project Type</label>
+                <select id="form-service" class="form-input" style="background-color: var(--bg-card);">
+                  <option value="Brand Identity">Brand Identity & Strategy</option>
+                  <option value="Packaging & Print">Packaging & Print Design</option>
+                  <option value="Editorial & Typography">Editorial & Typography</option>
+                  <option value="Art Direction & 3D">Art Direction & 3D Visuals</option>
+                  <option value="General Inquiry">General Commission</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Project Details & Timeline</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project, goals, and target timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+                Send Inquiry ↗
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL / LIGHTBOX FOR PROJECT CASE STUDIES -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close Case Study">✕</button>
+      
+      <div class="modal-media-header">
+        <img id="modal-img" src="" alt="Project Preview" class="modal-hero-img">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item">
+            <div class="label">Discipline</div>
+            <div class="value" id="modal-category">Branding</div>
+          </div>
+          <div class="modal-meta-item">
+            <div class="label">Client</div>
+            <div class="value" id="modal-client">Client Name</div>
+          </div>
+          <div class="modal-meta-item">
+            <div class="label">Year</div>
+            <div class="value" id="modal-year">2026</div>
+          </div>
+          <div class="modal-meta-item">
+            <div class="label">Role & Scope</div>
+            <div class="value" id="modal-role">Lead Designer</div>
+          </div>
+        </div>
+
+        <h3 id="modal-title" class="modal-title font-display">Project Title</h3>
+        
+        <p id="modal-overview" class="modal-overview">
+          Full detailed overview and design rationale...
+        </p>
+
+        <div class="modal-meta-item" style="margin-bottom: 2rem;">
+          <div class="label">Tools & Stack</div>
+          <div class="value" id="modal-tools">Illustrator, Photoshop, InDesign</div>
+        </div>
+
+        <!-- Color Palette Showcase -->
+        <div class="modal-palette-section">
+          <div class="modal-palette-title font-display">Identity Chromatic Palette</div>
+          <div id="modal-palette" class="palette-swatches">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Custom Project Actions -->
+        <div id="modal-custom-actions" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: none; justify-content: flex-end;">
+          <button id="delete-custom-project-btn" class="btn" style="background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.85rem;">
+            🗑 Remove Work from Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD NEW WORK -->
+  <div id="add-work-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container add-work-container">
+      <button id="add-work-modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+
+      <div class="modal-body" style="padding-bottom: 1rem;">
+        <span class="mono-tag" style="color: var(--accent-primary);">Portfolio Creator</span>
+        <h3 class="modal-title font-display" style="margin-top: 0.35rem; font-size: 1.8rem; margin-bottom: 0.35rem;">Add New Work</h3>
+        <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem;">
+          Select your design file from your computer or enter an image URL, fill in the project info, and publish it immediately.
+        </p>
+
+        <form id="add-work-form" class="add-work-form">
+          <!-- Artwork File Upload -->
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label">Artwork / Design Image *</label>
+            <div class="image-upload-zone" id="upload-zone">
+              <input type="file" id="work-image-file" accept="image/*" style="position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; z-index: 5;">
+              <div id="upload-placeholder" class="upload-placeholder">
+                <span class="upload-icon" style="font-size: 2rem;">🖼️</span>
+                <span class="upload-text" style="font-size: 0.95rem; font-weight: 600;">Click to select an image from your device</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Supports PNG, JPG, JPEG, WebP, SVG</span>
+              </div>
+              <div id="image-preview-wrapper" class="image-preview-wrapper" style="display: none;">
+                <img id="image-preview" src="" alt="Artwork Preview" style="max-height: 200px; width: auto; object-fit: contain; border-radius: 8px;">
+                <button type="button" id="remove-preview-btn" class="btn btn-secondary" style="margin-top: 0.5rem; font-size: 0.8rem; padding: 0.3rem 0.8rem;">Change Image</button>
+              </div>
+            </div>
+            <div style="margin-top: 0.65rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.8rem; color: var(--text-muted); white-space: nowrap;">Or image URL / path:</span>
+              <input type="text" id="work-image-url" class="form-input" style="flex: 1; padding: 0.45rem 0.75rem; font-size: 0.85rem;" placeholder="e.g. ./images/my-logo.png or https://...">
+            </div>
+          </div>
+
+          <!-- Title & Category -->
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label for="work-title" class="form-label">Project Title *</label>
+              <input type="text" id="work-title" class="form-input" placeholder="e.g. Abvab Brand Identity" required>
+            </div>
+
+            <div class="form-group">
+              <label for="work-category" class="form-label">Discipline / Category *</label>
+              <select id="work-category" class="form-input" style="background-color: var(--bg-card);">
+                <option value="branding" data-name="Brand Identity">Brand Identity</option>
+                <option value="poster" data-name="Poster & Print">Poster & Print</option>
+                <option value="packaging" data-name="Packaging">Packaging</option>
+                <option value="editorial" data-name="Editorial & Type">Editorial & Typography</option>
+                <option value="digital" data-name="Motion & 3D">Motion & 3D</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Client & Year -->
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label for="work-client" class="form-label">Client or Concept *</label>
+              <input type="text" id="work-client" class="form-input" placeholder="e.g. Abvab Studio" required>
+            </div>
+
+            <div class="form-group">
+              <label for="work-year" class="form-label">Year</label>
+              <input type="text" id="work-year" class="form-input" value="2026">
+            </div>
+          </div>
+
+          <!-- Role & Tools -->
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label for="work-role" class="form-label">Your Role</label>
+              <input type="text" id="work-role" class="form-input" placeholder="e.g. Lead Brand & Logo Designer">
+            </div>
+
+            <div class="form-group">
+              <label for="work-tools" class="form-label">Tools (comma separated)</label>
+              <input type="text" id="work-tools" class="form-input" placeholder="Illustrator, Photoshop">
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="form-group">
+            <label for="work-summary" class="form-label">Short Summary (Shown on Card) *</label>
+            <input type="text" id="work-summary" class="form-input" placeholder="Brief 1-2 sentence description..." required>
+          </div>
+
+          <!-- Full Story -->
+          <div class="form-group">
+            <label for="work-story" class="form-label">Case Study Details (Shown in Popup Modal)</label>
+            <textarea id="work-story" class="form-textarea" placeholder="Detail the concept, typography, design process, and outcome..."></textarea>
+          </div>
+
+          <!-- Tags & Palette -->
+          <div class="form-row-grid">
+            <div class="form-group">
+              <label for="work-tags" class="form-label">Tags (comma separated)</label>
+              <input type="text" id="work-tags" class="form-input" placeholder="Logo Design, Monogram, Print">
+            </div>
+
+            <div class="form-group">
+              <label for="work-palette" class="form-label">Brand Color Hexes (comma separated)</label>
+              <input type="text" id="work-palette" class="form-input" placeholder="#0a0a0a, #00FF66, #ffffff">
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary" style="flex: 1; padding: 0.85rem 1.5rem;">
+              ✓ Publish Work to Portfolio
+            </button>
+            <button type="button" id="cancel-add-work-btn" class="btn btn-secondary">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        © <span id="current-year">2026</span> <strong class="dynamic-designer-name">Adote Graphics</strong>. All rights reserved. Crafted with precision.
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <button id="export-projects-btn" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 0.9rem;" title="Download projects-data.js with your saved works">
+          📥 Export projects-data.js
+        </button>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+          Back to Top ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notice" class="toast-notice"></div>
+
+  <!-- Load Data and Main Controller -->
+  <script src="projects-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
